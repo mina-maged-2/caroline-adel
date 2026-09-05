@@ -249,4 +249,56 @@
             <a href="tel:+201111017261" class="action-card">
                 <i class="fa-solid fa-phone action-icon"></i>
                 <div class="action-text">
-                    <span class="action-label
+                    <span class="action-label">Call</span>
+                    <span class="action-val">Direct Line</span>
+                </div>
+            </a>
+
+            <a href="mailto:caroline.adel@ahramplastic.com" class="action-card">
+                <i class="fa-solid fa-envelope action-icon"></i>
+                <div class="action-text">
+                    <span class="action-label">Email</span>
+                    <span class="action-val">Send Mail</span>
+                </div>
+            </a>
+
+            <a href="https://www.facebook.com/ahramplasticgroup" class="action-card" target="_blank">
+                <i class="fa-brands fa-facebook-f action-icon"></i>
+                <div class="action-text">
+                    <span class="action-label">Facebook</span>
+                    <span class="action-val">Visit Page</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="footer-note">
+            Al-Ahram Group — Industrial Packaging Solutions
+        </div>
+    </div>
+
+    <script>
+        function downloadVCard() {
+            const vcardData = `BEGIN:VCARD
+VERSION:3.0
+N:Adel;Caroline;;;
+FN:Caroline Adel
+TITLE:Sales Executive
+ORG:Al-Ahram Group
+TEL;TYPE=CELL:+201111017261
+EMAIL:caroline.adel@ahramplastic.com
+URL:https://ahramplastic.com/
+URL;TYPE=Location:https://maps.app.goo.gl/pbsaNYLEP9VZ75um6?g_st=aw
+END:VCARD`;
+
+            const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', 'Caroline_Adel_Contact.vcf');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
